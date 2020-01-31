@@ -22,7 +22,7 @@ def terminate():
 
 # Загрузка изображений
 def load_image(name, colorkey=None):
-    fullname = os.path.join('data', name)
+    fullname = name
     image = pygame.image.load(fullname).convert()
     # colorkey цвет заднего фона
     if colorkey is not None:
@@ -36,7 +36,7 @@ def load_image(name, colorkey=None):
 
 # Загрузка уровня
 def load_level(filename):
-    filename = "lvl/" + filename
+    filename = filename
     # читаем уровень, убирая символы перевода строки
     with open(filename, 'r') as mapFile:
         level_map = [line.strip() for line in mapFile]
